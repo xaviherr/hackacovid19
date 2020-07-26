@@ -44,6 +44,14 @@ class MenuFragment : Fragment(), MenuListAdapter.OnItemClickListener {
     }
 
     override fun onClick(position: Int, view: View) {
-        findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToRegCaseFragment())
+        if (position == 0){
+            findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToRegCaseFragment())
+        }
+        if (position == 1){
+            findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToRegContactFragment())
+        }
+        if (position == 4){
+            findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToReqResourcesFragment())
+        }
     }
 }

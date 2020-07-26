@@ -11,41 +11,40 @@ import com.example.ctrural.dialogfragments.RegGenDialogFragment
 import com.google.android.material.button.MaterialButton
 import kotlinx.android.synthetic.main.fragment_reg_case.view.*
 
-class RegCaseFragment: Fragment() {
+class RegContactFragment: Fragment() {
 
-    private lateinit var regCaseView: View
+    private lateinit var regContactView: View
     private lateinit var btnSave: MaterialButton
     private lateinit var btnRegGen: MaterialButton
     private lateinit var btnAntMed: MaterialButton
-    private var caseDni: Int = 0
+    private var contactDni: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        regCaseView = inflater.inflate(R.layout.fragment_reg_case, container, false)
+        regContactView = inflater.inflate(R.layout.fragment_reg_contact, container, false)
 
         setBtnRegGenListener()
         setBtnAntMedListener()
 
-        return regCaseView
+        return regContactView
     }
 
     private fun setBtnRegGenListener() {
-        btnRegGen = regCaseView.btn_gen
+        btnRegGen = regContactView.btn_gen
         btnRegGen.setOnClickListener{
-            val regGenDialogFragment = RegGenDialogFragment.newInstance(caseDni)
+            val regGenDialogFragment = RegGenDialogFragment.newInstance(contactDni)
             regGenDialogFragment.show(childFragmentManager, "dialog")
         }
     }
 
     private fun setBtnAntMedListener() {
-        btnAntMed = regCaseView.btn_am
+        btnAntMed = regContactView.btn_am
         btnAntMed.setOnClickListener{
-            val regAntMedDialogFragment = RegAntMedDialogFragment.newInstance(caseDni)
+            val regAntMedDialogFragment = RegAntMedDialogFragment.newInstance(contactDni)
             regAntMedDialogFragment.show(childFragmentManager, "dialog")
         }
     }
-
 }

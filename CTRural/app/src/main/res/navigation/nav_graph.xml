@@ -12,10 +12,26 @@
         <action
             android:id="@+id/action_menuFragment_to_regCaseFragment"
             app:destination="@id/regCaseFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_regContactFragment"
+            app:destination="@id/regContactFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_reqResourcesFragment"
+            app:destination="@id/reqResourcesFragment" />
     </fragment>
     <fragment
         android:id="@+id/regCaseFragment"
         android:name="com.example.ctrural.fragments.RegCaseFragment"
         android:label="fragment_reg_case"
         tools:layout="@layout/fragment_reg_case" />
+    <fragment
+        android:id="@+id/regContactFragment"
+        android:name="com.example.ctrural.fragments.RegContactFragment"
+        android:label="RegContactFragment"
+        tools:layout="@layout/fragment_reg_contact" />
+    <fragment
+        android:id="@+id/reqResourcesFragment"
+        android:name="com.example.ctrural.fragments.ReqResourcesFragment"
+        android:label="ReqResourcesFragment"
+        tools:layout="@layout/fragment_req_resources" />
 </navigation>

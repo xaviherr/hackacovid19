@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_reg_case_head"
+        android:src="@drawable/ic_reg_contact"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_reg_case_head"
+        app:layout_constraintTop_toBottomOf="@+id/iv_reg_case_head"
+        android:text="Registro de Contacto"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_ins_ref"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reg_case_head"
+        android:hint="Caso de referencia"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ins_ref"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_ins_dni"
+        app:layout_constraintTop_toBottomOf="@+id/tl_ins_ref"
+        android:hint="DNI del Contacto"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ins_dni"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_ins_nom"
+        app:layout_constraintTop_toBottomOf="@+id/tl_ins_dni"
+        android:hint="Nombre del Contacto"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ins_nom"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_ins_nac"
+        app:layout_constraintTop_toBottomOf="@+id/tl_ins_nom"
+        android:hint="Fecha de nacimiento"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ins_nac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_ins_ocu"
+        app:layout_constraintTop_toBottomOf="@+id/tl_ins_nac"
+        android:hint="Ocupación / Cultivo"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ins_ocu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_gen"
+        android:text="Género"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:backgroundTint="@color/colorPrimary"
+        android:textAppearance="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_am"
+        app:layout_constraintTop_toBottomOf="@+id/tl_ins_ocu"
+        android:padding="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_am"
+        android:text="Ant. Méd."
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:textAppearance="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:backgroundTint="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/btn_gen"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_ins_ocu"
+        android:padding="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        android:text="Guardar"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:textAppearance="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gen"
+        android:padding="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
