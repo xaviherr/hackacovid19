@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chp_grp_ant_med"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chp_reg_obe"
+            android:text="Obesidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chp_reg_hip"
+            android:text="Hipertensión"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chp_reg_asm"
+            android:text="Asma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chp_reg_diab"
+            android:text="Diabetes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chp_reg_tbc"
+            android:text="Tuberculosis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chp_reg_neum"
+            android:text="Neumonía"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chp_reg_inm"
+            android:text="Inmunodeficiencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
